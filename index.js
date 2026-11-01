@@ -1,10 +1,10 @@
 const { Telegraf, Markup } = require('telegraf');
 
-// استبدل النص أدناه بالتوكن الخاص بك من BotFather
+// التوكن الخاص بك
 const bot = new Telegraf('9183629874:AAG3PAXPynfyXETP0wchGhtuyo-PeDHhUoU');
 
-// ضع هنا رابط موقعك على GitHub Pages أو Vercel بعد ربطه (سنضع رابط مؤقت أو مباشر)
-const webAppUrl = 'https://semoalking.github.io/usdt-mini-app/'; 
+// رابط موقعك الجديد على جيت هب
+const webAppUrl = 'https://waseem7744.github.io/usdt-mini-app/'; 
 
 bot.start((ctx) => {
     ctx.reply(

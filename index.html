@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مهام USDT</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://sad.adsgram.ai/js/sad.min.js"></script>
+    <style>
+        body { font-family: Tahoma, sans-serif; background: #1a1a2e; color: #fff; text-align: center; padding: 20px; margin: 0; }
+        .balance-card { background: #16213e; padding: 20px; border-radius: 15px; margin-bottom: 25px; border: 1px solid #0f3460; }
+        .balance-card h2 { margin: 10px 0 0; color: #00ff88; font-size: 28px; }
+        .task { background: #0f3460; padding: 15px; border-radius: 10px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; }
+        button { background: #e94560; color: #fff; border: none; padding: 10px 18px; border-radius: 8px; font-weight: bold; cursor: pointer; }
+        button:active { transform: scale(0.95); }
+    </style>
+</head>
+<body>
+
+    <div class="balance-card">
+        <div>رصيدك الحالي</div>
+        <h2><span id="balance">0.00</span> USDT</h2>
+    </div>
+
+    <h3>المهام المتاحة اليوم</h3>
+
+    <div class="task">
+        <span>🎁 مكافأة الدخول اليومي (+0.05)</span>
+        <button onclick="addReward(0.05)">استلام</button>
+    </div>
+
+    <div class="task">
+        <span>📺 شاهد إعلان واربح (+0.10)</span>
+        <button onclick="watchAd()">مشاهدة</button>
+    </div>
+
+    <script>
+        const tg = window.Telegram.WebApp;
+        tg.expand();
+
+        let currentBalance = 0.00;
+
+        function addReward(amount) {
+            currentBalance += amount;
+            document.getElementById('balance').innerText = currentBalance.toFixed(2);
+            alert("تمت إضافة المكافأة إلى رصيدك!");
+        }
+
+        function watchAd() {
+            alert("سيتم عرض إعلان Adsgram هنا قريباً!");
+            addReward(0.10);
+        }
+    </script>
+</body>
+</html>
